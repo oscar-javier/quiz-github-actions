@@ -16,4 +16,4 @@ jobs:
       run: date
 
     - name: step 3 - mostrar sistema operativo
-      run: echo "sistema operativo del runner: $RUNNER_OS"
+      run: echo "sistema operativo del runner:$RUNNER_OS"
