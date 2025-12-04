@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del código
+      - name: Checkout del codigo
         uses: actions/checkout@v3
 
-      - name: Verificación de código
+      - name: verificacion de codigo
         run: echo "Código verificado correctamente"
 
   # Job 2
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del código
+      - name: checkout del codigo
         uses: actions/checkout@v3
 
       - name: Configurar Node.js
@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Ejecutar tests
+      - name: ejecutar tests
         run: npm test
 
   # Job 3
@@ -42,19 +42,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del código
+      - name: checkout del código
         uses: actions/checkout@v3
 
-      - name: Mensaje de build
+      - name: mensaje de build
         run: echo "Build completado exitosamente"
 
-      - name: Crear archivo build-info.txt
+      - name: crear archivo build-info.txt
         run: |
           echo "Fecha del build:" > build-info.txt
           date >> build-info.txt
           echo "Version: 1.0.0" >> build-info.txt
 
-      - name: Subir artifact del build
+      - name: subir artifact del build
         uses: actions/upload-artifact@v4
         with:
           name: build-artifact

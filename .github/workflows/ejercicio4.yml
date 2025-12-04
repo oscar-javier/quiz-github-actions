@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Checkout del código
+      - name: checkout del código
         uses: actions/checkout@v3
 
       - name: Configurar Node.js
@@ -21,12 +21,12 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Ejecutar tests
+      - name: ejecutar tests
         run: npm test
 
-      - name: Mostrar sistema operativo
+      - name: mostrar sistema operativo
         run: echo "Sistema operativo:${{ runner.os }}"
 
-      - name: Solo en Linux
+      - name: solo en Linux
         if: runner.os == 'Linux'
-        run: echo "Este step solo aparece en Linux"
+        run: echo "este step solo aparece en Linux"
